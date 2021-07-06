@@ -8,6 +8,7 @@ Created on Mon Jul  5 15:54:10 2021
 
 # A file for functions often used in Project Euler
 
+# Determines if a number is prime
 def is_prime(n):
     prime = True
     for i in range(2,n):
@@ -16,7 +17,16 @@ def is_prime(n):
             break
     return(prime)
 
+# Determines if n is a power of x
+def is_power(x,y):
+    if(x == 1):
+        return(y == 1)
+    pow = 1
+    while (pow < y):
+        pow = pow * x
+    return(pow == y)
 
+# Generates all prime numbers up to n
 def SieveOfEratosthenes(n):
 
     prime = [True for i in range(n+1)]
